@@ -1,4 +1,13 @@
-﻿using System;
+﻿/// <summary>
+/// Applicaiton: Slot Machine
+/// Author: Mark Chipp (original code template by Tom Tsiliopolous
+/// Student ID: 200180985
+/// Last modified: 4-Dec-2016
+/// Description: This is a slot machine game where users can bet credits and spin-to-win!
+/// </summary>
+
+using COMP1004_Assignment5_200180985.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,6 +20,8 @@ using System.Windows.Forms;
 
 namespace COMP1004_Assignment5_200180985
 {
+    ///////////////CLASSES\\\\\\\\\\\\\\\\\
+
     public partial class SlotMachineForm : Form
     {
         private int playerMoney = 1000;
@@ -39,16 +50,9 @@ namespace COMP1004_Assignment5_200180985
         {
             InitializeComponent();
             UpdateLabels();
-
         }
 
-        private void UpdateLabels()
-        {
-            MoneyLabel.Text = playerMoney.ToString();
-            BetLabel.Text = playerBet.ToString();
-            JackpotLabel.Text = jackpot.ToString();
-            WinningsLabel.Text = winnings.ToString();
-        }
+        ///////////////FUNCTIONS\\\\\\\\\\\\\\\\\
 
         /* Utility function to show Player Stats */
         private void showPlayerStats()
@@ -90,6 +94,7 @@ namespace COMP1004_Assignment5_200180985
             winNumber = 0;
             lossNumber = 0;
             winRatio = 0.0f;
+            UpdateLabels();
         }
 
         /* Check to see if the player won the jackpot */
@@ -137,6 +142,9 @@ namespace COMP1004_Assignment5_200180985
             string[] betLine = { " ", " ", " " };
             int[] outCome = { 0, 0, 0 };
 
+            // create a list of the reel images to by updated dynamically as each reel is selected
+            PictureBox[] reels = { ReelOnePictureBox, ReelTwoPictureBox, ReelThreePictureBox };
+
             for (var spin = 0; spin < 3; spin++)
             {
                 outCome[spin] = this.random.Next(65) + 1;
@@ -144,41 +152,57 @@ namespace COMP1004_Assignment5_200180985
                 if (checkRange(outCome[spin], 1, 27))
                 {  // 41.5% probability
                     betLine[spin] = "blank";
+                    // reel for current spin updates with appropriate image
+                    reels[spin].BackgroundImage = Resources.blank;
                     blanks++;
                 }
                 else if (checkRange(outCome[spin], 28, 37))
                 { // 15.4% probability
                     betLine[spin] = "Grapes";
+                    // reel for current spin updates with appropriate image
+                    reels[spin].BackgroundImage = Resources.grapes;
                     grapes++;
                 }
                 else if (checkRange(outCome[spin], 38, 46))
                 { // 13.8% probability
                     betLine[spin] = "Banana";
+                    // reel for current spin updates with appropriate image
+                    reels[spin].BackgroundImage = Resources.banana;
                     bananas++;
                 }
                 else if (checkRange(outCome[spin], 47, 54))
                 { // 12.3% probability
                     betLine[spin] = "Orange";
+                    // reel for current spin updates with appropriate image
+                    reels[spin].BackgroundImage = Resources.orange;
                     oranges++;
                 }
                 else if (checkRange(outCome[spin], 55, 59))
                 { //  7.7% probability
                     betLine[spin] = "Cherry";
+                    // reel for current spin updates with appropriate image
+                    reels[spin].BackgroundImage = Resources.cherry;
                     cherries++;
                 }
                 else if (checkRange(outCome[spin], 60, 62))
                 { //  4.6% probability
                     betLine[spin] = "Bar";
+                    // reel for current spin updates with appropriate image
+                    reels[spin].BackgroundImage = Resources.bar;
                     bars++;
                 }
                 else if (checkRange(outCome[spin], 63, 64))
                 { //  3.1% probability
                     betLine[spin] = "Bell";
+                    // reel for current spin updates with appropriate image
+                    reels[spin].BackgroundImage = Resources.bell;
                     bells++;
                 }
                 else if (checkRange(outCome[spin], 65, 65))
                 { //  1.5% probability
                     betLine[spin] = "Seven";
+                    // reel for current spin updates with appropriate image
+                    reels[spin].BackgroundImage = Resources.seven;
                     sevens++;
                 }
 
@@ -263,8 +287,18 @@ namespace COMP1004_Assignment5_200180985
                 lossNumber++;
                 showLossMessage();
             }
-
         }
+
+        /* updates all labels for player money, current bet, jackpot and winnings */
+        private void UpdateLabels()
+        {
+            MoneyLabel.Text = playerMoney.ToString();
+            BetLabel.Text = playerBet.ToString();
+            JackpotLabel.Text = jackpot.ToString();
+            WinningsLabel.Text = winnings.ToString();
+        }
+
+        ///////////////EVENT HANDLERS\\\\\\\\\\\\\\\\\
 
         private void SpinPictureBox_Click(object sender, EventArgs e)
         {
@@ -311,7 +345,7 @@ namespace COMP1004_Assignment5_200180985
         // event handler handles resetting the game when the reset picturebox is clicked
         private void ResetPictureBox_Click(object sender, EventArgs e)
         {
-
+            resetAll();
         }
     }
 
