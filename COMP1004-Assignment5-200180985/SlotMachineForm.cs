@@ -38,6 +38,16 @@ namespace COMP1004_Assignment5_200180985
         public SlotMachineForm()
         {
             InitializeComponent();
+            UpdateLabels();
+
+        }
+
+        private void UpdateLabels()
+        {
+            MoneyLabel.Text = playerMoney.ToString();
+            BetLabel.Text = playerBet.ToString();
+            JackpotLabel.Text = jackpot.ToString();
+            WinningsLabel.Text = winnings.ToString();
         }
 
         /* Utility function to show Player Stats */
@@ -289,6 +299,19 @@ namespace COMP1004_Assignment5_200180985
             {
                 MessageBox.Show("Please enter a valid bet amount");
             }
+            UpdateLabels();
+        }
+
+        // event handler handles exiting application when power picturebox is clicked
+        private void ExitPictureBox_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        // event handler handles resetting the game when the reset picturebox is clicked
+        private void ResetPictureBox_Click(object sender, EventArgs e)
+        {
+
         }
     }
 
