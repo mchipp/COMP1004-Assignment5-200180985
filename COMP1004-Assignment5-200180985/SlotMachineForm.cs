@@ -20,7 +20,9 @@ using System.Windows.Forms;
 
 namespace COMP1004_Assignment5_200180985
 {
-    ///////////////CLASSES\\\\\\\\\\\\\\\\\
+    ///////////////////////\\\\\\\\\\\\\\\\\\\\\\\
+    ///////////////////CLASSES\\\\\\\\\\\\\\\\\\\\
+    ///////////////////////\\\\\\\\\\\\\\\\\\\\\\\
 
     public partial class SlotMachineForm : Form
     {
@@ -52,7 +54,9 @@ namespace COMP1004_Assignment5_200180985
             UpdateLabels();
         }
 
-        ///////////////FUNCTIONS\\\\\\\\\\\\\\\\\
+        ///////////////////////\\\\\\\\\\\\\\\\\\\\\\\
+        ///////////////////FUNCTIONS\\\\\\\\\\\\\\\\\\
+        ///////////////////////\\\\\\\\\\\\\\\\\\\\\\\
 
         /* Utility function to show Player Stats */
         private void showPlayerStats()
@@ -298,7 +302,9 @@ namespace COMP1004_Assignment5_200180985
             WinningsLabel.Text = winnings.ToString();
         }
 
-        ///////////////EVENT HANDLERS\\\\\\\\\\\\\\\\\
+        ///////////////////////\\\\\\\\\\\\\\\\\\\\\\\
+        /////////////////EVENT HANDLERS\\\\\\\\\\\\\\\
+        ///////////////////////\\\\\\\\\\\\\\\\\\\\\\\
 
         private void SpinPictureBox_Click(object sender, EventArgs e)
         {
@@ -333,6 +339,8 @@ namespace COMP1004_Assignment5_200180985
             {
                 MessageBox.Show("Please enter a valid bet amount");
             }
+
+            // now update our labels
             UpdateLabels();
         }
 
@@ -348,5 +356,4 @@ namespace COMP1004_Assignment5_200180985
             resetAll();
         }
     }
-
 }
