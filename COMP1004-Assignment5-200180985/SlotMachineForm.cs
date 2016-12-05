@@ -90,6 +90,8 @@ namespace COMP1004_Assignment5_200180985
         /* Utility function to reset the player stats */
         private void resetAll()
         {
+            PictureBox[] reels = { ReelOnePictureBox, ReelTwoPictureBox, ReelThreePictureBox };
+
             playerMoney = 1000;
             winnings = 0;
             jackpot = 5000;
@@ -99,6 +101,11 @@ namespace COMP1004_Assignment5_200180985
             lossNumber = 0;
             winRatio = 0.0f;
             UpdateLabels();
+            
+            foreach(PictureBox reel in reels)
+            {
+                reel.BackgroundImage = Resources.blank;
+            }
         }
 
         /* Check to see if the player won the jackpot */
@@ -119,7 +126,7 @@ namespace COMP1004_Assignment5_200180985
         private void showWinMessage()
         {
             playerMoney += winnings;
-            MessageBox.Show("You Won: $" + winnings, "Winner!");
+            //MessageBox.Show("You Won: $" + winnings, "Winner!"); // uncomment this line for debugging
             resetFruitTally();
             checkJackPot();
         }
@@ -128,7 +135,7 @@ namespace COMP1004_Assignment5_200180985
         private void showLossMessage()
         {
             playerMoney -= playerBet;
-            MessageBox.Show("You Lost!", "Loss!");
+            //MessageBox.Show("You Lost!", "Loss!");
             resetFruitTally();
         }
 
@@ -136,20 +143,20 @@ namespace COMP1004_Assignment5_200180985
         private bool checkRange(int value, int lowerBounds, int upperBounds)
         {
             return (value >= lowerBounds && value <= upperBounds) ? true : false;
-
         }
 
         /* When this function is called it determines the betLine results.
     e.g. Bar - Orange - Banana */
         private string[] Reels()
         {
-            string[] betLine = { " ", " ", " " };
-            int[] outCome = { 0, 0, 0 };
+            string[] betLine = { " ", " ", " ", " ", " ", " ", " " };
+            int[] outCome = { 0, 0, 0, 0, 0, 0, 0 };
 
             // create a list of the reel images to by updated dynamically as each reel is selected
-            PictureBox[] reels = { ReelOnePictureBox, ReelTwoPictureBox, ReelThreePictureBox };
+            PictureBox[] reels = { ReelOnePictureBox, ReelTwoPictureBox, ReelThreePictureBox, ReelFourPictureBox,
+                                    ReelFivePictureBox, ReelSixPictureBox, ReelSevenPictureBox };
 
-            for (var spin = 0; spin < 3; spin++)
+            for (var spin = 0; spin < 7; spin++)
             {
                 outCome[spin] = this.random.Next(65) + 1;
 
@@ -157,56 +164,56 @@ namespace COMP1004_Assignment5_200180985
                 {  // 41.5% probability
                     betLine[spin] = "blank";
                     // reel for current spin updates with appropriate image
-                    reels[spin].BackgroundImage = Resources.blank;
+                    reels[spin].Image = Resources.blank;
                     blanks++;
                 }
                 else if (checkRange(outCome[spin], 28, 37))
                 { // 15.4% probability
-                    betLine[spin] = "Grapes";
+                    betLine[spin] = "Chevron 1";
                     // reel for current spin updates with appropriate image
-                    reels[spin].BackgroundImage = Resources.grapes;
+                    reels[spin].Image = Resources.icon_1;
                     grapes++;
                 }
                 else if (checkRange(outCome[spin], 38, 46))
                 { // 13.8% probability
-                    betLine[spin] = "Banana";
+                    betLine[spin] = "Chevron 2";
                     // reel for current spin updates with appropriate image
-                    reels[spin].BackgroundImage = Resources.banana;
+                    reels[spin].Image = Resources.icon_2;
                     bananas++;
                 }
                 else if (checkRange(outCome[spin], 47, 54))
                 { // 12.3% probability
-                    betLine[spin] = "Orange";
+                    betLine[spin] = "Chevron 3";
                     // reel for current spin updates with appropriate image
-                    reels[spin].BackgroundImage = Resources.orange;
+                    reels[spin].Image = Resources.icon_3;
                     oranges++;
                 }
                 else if (checkRange(outCome[spin], 55, 59))
                 { //  7.7% probability
-                    betLine[spin] = "Cherry";
+                    betLine[spin] = "Chevron 4";
                     // reel for current spin updates with appropriate image
-                    reels[spin].BackgroundImage = Resources.cherry;
+                    reels[spin].Image = Resources.icon_4;
                     cherries++;
                 }
                 else if (checkRange(outCome[spin], 60, 62))
                 { //  4.6% probability
-                    betLine[spin] = "Bar";
+                    betLine[spin] = "Chevron 5";
                     // reel for current spin updates with appropriate image
-                    reels[spin].BackgroundImage = Resources.bar;
+                    reels[spin].Image = Resources.x302;
                     bars++;
                 }
                 else if (checkRange(outCome[spin], 63, 64))
                 { //  3.1% probability
-                    betLine[spin] = "Bell";
+                    betLine[spin] = "Chevron 6";
                     // reel for current spin updates with appropriate image
-                    reels[spin].BackgroundImage = Resources.bell;
+                    reels[spin].Image = Resources.x304;
                     bells++;
                 }
                 else if (checkRange(outCome[spin], 65, 65))
                 { //  1.5% probability
-                    betLine[spin] = "Seven";
+                    betLine[spin] = "Chevron 7";
                     // reel for current spin updates with appropriate image
-                    reels[spin].BackgroundImage = Resources.seven;
+                    reels[spin].Image = Resources.seven;
                     sevens++;
                 }
 
@@ -330,10 +337,10 @@ namespace COMP1004_Assignment5_200180985
             {
                 spinResult = Reels();
                 fruits = spinResult[0] + " - " + spinResult[1] + " - " + spinResult[2];
-                MessageBox.Show(fruits);
+                //MessageBox.Show(fruits);
                 determineWinnings();
                 turn++;
-                showPlayerStats();
+                //showPlayerStats();
             }
             else
             {
