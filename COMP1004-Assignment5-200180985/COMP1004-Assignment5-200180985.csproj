@@ -84,8 +84,11 @@
     <None Include="Resources\banana.gif" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\banana1.gif" />
     <Content Include="Resources\bar.gif" />
+    <None Include="Resources\bar1.gif" />
     <Content Include="Resources\bell.gif" />
+    <None Include="Resources\bell1.gif" />
     <Content Include="Resources\bet1.gif" />
     <Content Include="Resources\bet10.gif" />
     <Content Include="Resources\bet100.gif" />
@@ -97,6 +100,7 @@
     <Content Include="Resources\bet_line.gif" />
     <Content Include="Resources\blank.gif" />
     <Content Include="Resources\cherry.gif" />
+    <None Include="Resources\cherry1.gif" />
     <Content Include="Resources\grapes.gif" />
     <None Include="Resources\x304.png" />
     <None Include="Resources\x302.png" />
@@ -108,6 +112,7 @@
     <None Include="Resources\icon_2.png" />
     <None Include="Resources\icon_3.png" />
     <None Include="Resources\icon_4.png" />
+    <None Include="Resources\grapes1.gif" />
     <Content Include="Resources\orange.gif" />
     <Content Include="Resources\powerbutton.gif" />
     <Content Include="Resources\reset.gif" />
