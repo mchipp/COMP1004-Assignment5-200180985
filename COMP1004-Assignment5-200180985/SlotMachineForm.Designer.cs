@@ -50,6 +50,7 @@
             this.ReelFivePictureBox = new System.Windows.Forms.PictureBox();
             this.ReelSixPictureBox = new System.Windows.Forms.PictureBox();
             this.ReelSevenPictureBox = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.SpinPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ReelOnePictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ReelTwoPictureBox)).BeginInit();
@@ -163,11 +164,11 @@
             // 
             this.JackpotLabel.AutoSize = true;
             this.JackpotLabel.BackColor = System.Drawing.Color.Transparent;
-            this.JackpotLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.JackpotLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.JackpotLabel.ForeColor = System.Drawing.Color.Gold;
-            this.JackpotLabel.Location = new System.Drawing.Point(187, 166);
+            this.JackpotLabel.Location = new System.Drawing.Point(129, 31);
             this.JackpotLabel.Name = "JackpotLabel";
-            this.JackpotLabel.Size = new System.Drawing.Size(0, 16);
+            this.JackpotLabel.Size = new System.Drawing.Size(0, 13);
             this.JackpotLabel.TabIndex = 14;
             // 
             // WinningsLabel
@@ -297,6 +298,18 @@
             this.ReelSevenPictureBox.TabIndex = 27;
             this.ReelSevenPictureBox.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Gold;
+            this.label1.Location = new System.Drawing.Point(126, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 15);
+            this.label1.TabIndex = 28;
+            this.label1.Text = "Jackpot";
+            // 
             // SlotMachineForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -304,6 +317,7 @@
             this.BackgroundImage = global::COMP1004_Assignment5_200180985.Properties.Resources.idle_console;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(534, 495);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.ReelSevenPictureBox);
             this.Controls.Add(this.ReelSixPictureBox);
             this.Controls.Add(this.ReelFivePictureBox);
@@ -378,5 +392,6 @@
         private System.Windows.Forms.PictureBox ReelFivePictureBox;
         private System.Windows.Forms.PictureBox ReelSixPictureBox;
         private System.Windows.Forms.PictureBox ReelSevenPictureBox;
+        private System.Windows.Forms.Label label1;
     }
 }

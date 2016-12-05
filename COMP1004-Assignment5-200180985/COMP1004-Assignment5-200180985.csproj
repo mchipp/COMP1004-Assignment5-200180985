@@ -118,6 +118,7 @@
     <Content Include="Resources\reset.gif" />
     <Content Include="Resources\seven.gif" />
     <None Include="Resources\sg_atlantis.jpg" />
+    <None Include="Resources\SGC_Logo.png" />
     <Content Include="Resources\slotmachine.gif" />
     <Content Include="Resources\spin.gif" />
     <None Include="Resources\spin_button.png" />
