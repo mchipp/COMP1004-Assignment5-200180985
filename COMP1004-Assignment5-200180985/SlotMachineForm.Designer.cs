@@ -155,7 +155,7 @@
             this.BetLabel.BackColor = System.Drawing.Color.Transparent;
             this.BetLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BetLabel.ForeColor = System.Drawing.Color.Gold;
-            this.BetLabel.Location = new System.Drawing.Point(201, 379);
+            this.BetLabel.Location = new System.Drawing.Point(201, 388);
             this.BetLabel.Name = "BetLabel";
             this.BetLabel.Size = new System.Drawing.Size(0, 16);
             this.BetLabel.TabIndex = 13;
@@ -177,13 +177,14 @@
             this.WinningsLabel.BackColor = System.Drawing.Color.Transparent;
             this.WinningsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.WinningsLabel.ForeColor = System.Drawing.Color.Gold;
-            this.WinningsLabel.Location = new System.Drawing.Point(289, 379);
+            this.WinningsLabel.Location = new System.Drawing.Point(289, 388);
             this.WinningsLabel.Name = "WinningsLabel";
             this.WinningsLabel.Size = new System.Drawing.Size(0, 16);
             this.WinningsLabel.TabIndex = 15;
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackgroundImage = global::COMP1004_Assignment5_200180985.Properties.Resources.bet1;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(106, 400);
             this.pictureBox1.Name = "pictureBox1";
@@ -193,6 +194,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BackgroundImage = global::COMP1004_Assignment5_200180985.Properties.Resources.bet2;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Location = new System.Drawing.Point(144, 400);
             this.pictureBox2.Name = "pictureBox2";
@@ -202,6 +204,7 @@
             // 
             // pictureBox3
             // 
+            this.pictureBox3.BackgroundImage = global::COMP1004_Assignment5_200180985.Properties.Resources.bet5;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox3.Location = new System.Drawing.Point(182, 400);
             this.pictureBox3.Name = "pictureBox3";
@@ -211,6 +214,7 @@
             // 
             // pictureBox4
             // 
+            this.pictureBox4.BackgroundImage = global::COMP1004_Assignment5_200180985.Properties.Resources.bet10;
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox4.Location = new System.Drawing.Point(220, 400);
             this.pictureBox4.Name = "pictureBox4";
@@ -220,6 +224,7 @@
             // 
             // pictureBox5
             // 
+            this.pictureBox5.BackgroundImage = global::COMP1004_Assignment5_200180985.Properties.Resources.bet25;
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox5.Location = new System.Drawing.Point(258, 400);
             this.pictureBox5.Name = "pictureBox5";
@@ -229,6 +234,7 @@
             // 
             // pictureBox6
             // 
+            this.pictureBox6.BackgroundImage = global::COMP1004_Assignment5_200180985.Properties.Resources.bet50;
             this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox6.Location = new System.Drawing.Point(296, 400);
             this.pictureBox6.Name = "pictureBox6";
@@ -238,12 +244,14 @@
             // 
             // pictureBox7
             // 
+            this.pictureBox7.BackgroundImage = global::COMP1004_Assignment5_200180985.Properties.Resources.bet100;
             this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox7.Location = new System.Drawing.Point(334, 400);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(32, 32);
             this.pictureBox7.TabIndex = 22;
             this.pictureBox7.TabStop = false;
+            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
             // 
             // ReelFourPictureBox
             // 
@@ -258,6 +266,7 @@
             // 
             // pictureBox8
             // 
+            this.pictureBox8.BackgroundImage = global::COMP1004_Assignment5_200180985.Properties.Resources.bet500;
             this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox8.Location = new System.Drawing.Point(372, 400);
             this.pictureBox8.Name = "pictureBox8";

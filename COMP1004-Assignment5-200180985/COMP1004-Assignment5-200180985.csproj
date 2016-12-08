@@ -84,6 +84,7 @@
     <None Include="Resources\banana.gif" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Starlock.wav" />
     <None Include="Resources\banana1.gif" />
     <Content Include="Resources\bar.gif" />
     <None Include="Resources\bar1.gif" />
@@ -101,6 +102,8 @@
     <Content Include="Resources\blank.gif" />
     <Content Include="Resources\cherry.gif" />
     <None Include="Resources\cherry1.gif" />
+    <None Include="Resources\chev_usual_1.wav" />
+    <None Include="Resources\chevlock.wav" />
     <Content Include="Resources\grapes.gif" />
     <None Include="Resources\x304.png" />
     <None Include="Resources\x302.png" />
@@ -113,6 +116,8 @@
     <None Include="Resources\icon_3.png" />
     <None Include="Resources\icon_4.png" />
     <None Include="Resources\grapes1.gif" />
+    <None Include="Resources\locked.wav" />
+    <None Include="Resources\lockedchev.wav" />
     <Content Include="Resources\orange.gif" />
     <Content Include="Resources\powerbutton.gif" />
     <Content Include="Resources\reset.gif" />

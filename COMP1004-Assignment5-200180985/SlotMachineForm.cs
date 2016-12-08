@@ -15,6 +15,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -90,7 +91,8 @@ namespace COMP1004_Assignment5_200180985
         /* Utility function to reset the player stats */
         private void resetAll()
         {
-            PictureBox[] reels = { ReelOnePictureBox, ReelTwoPictureBox, ReelThreePictureBox };
+            PictureBox[] reels = { ReelOnePictureBox, ReelTwoPictureBox, ReelThreePictureBox, ReelFourPictureBox, ReelFivePictureBox,
+                                    ReelSixPictureBox, ReelSevenPictureBox };
 
             playerMoney = 1000;
             winnings = 0;
@@ -104,7 +106,7 @@ namespace COMP1004_Assignment5_200180985
             
             foreach(PictureBox reel in reels)
             {
-                reel.BackgroundImage = Resources.blank;
+                reel.Image = Resources.blank;
             }
         }
 
@@ -158,6 +160,15 @@ namespace COMP1004_Assignment5_200180985
 
             for (var spin = 0; spin < 7; spin++)
             {
+
+                System.Media.SoundPlayer player = new System.Media.SoundPlayer(Resources.lockedchev);
+                
+                Application.DoEvents(); //allow windows to execute all pending tasks including your image show...
+                Thread.Sleep(1250);
+
+                player.Play();
+
+
                 outCome[spin] = this.random.Next(65) + 1;
 
                 if (checkRange(outCome[spin], 1, 27))
@@ -216,7 +227,6 @@ namespace COMP1004_Assignment5_200180985
                     reels[spin].Image = Resources.SGC_Logo;
                     sevens++;
                 }
-
             }
             return betLine;
         }
@@ -336,7 +346,7 @@ namespace COMP1004_Assignment5_200180985
             else if (playerBet <= playerMoney)
             {
                 spinResult = Reels();
-                fruits = spinResult[0] + " - " + spinResult[1] + " - " + spinResult[2];
+                //fruits = spinResult[0] + " - " + spinResult[1] + " - " + spinResult[2];
                 //MessageBox.Show(fruits);
                 determineWinnings();
                 turn++;
@@ -361,6 +371,11 @@ namespace COMP1004_Assignment5_200180985
         private void ResetPictureBox_Click(object sender, EventArgs e)
         {
             resetAll();
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
