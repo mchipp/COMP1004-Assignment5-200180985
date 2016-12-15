@@ -54,6 +54,7 @@
             this.PlayerMoneyLabel = new System.Windows.Forms.Label();
             this.PlayerBetLabel = new System.Windows.Forms.Label();
             this.PlayerWinningsLabel = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.SpinPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ReelOnePictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ReelTwoPictureBox)).BeginInit();
@@ -368,6 +369,16 @@
             this.PlayerWinningsLabel.TabIndex = 31;
             this.PlayerWinningsLabel.Text = "Winnings";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(217, 453);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 32;
+            this.button1.Text = "Reset Bet";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // SlotMachineForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -375,6 +386,7 @@
             this.BackgroundImage = global::COMP1004_Assignment5_200180985.Properties.Resources.idle_console;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(534, 495);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.PlayerWinningsLabel);
             this.Controls.Add(this.PlayerBetLabel);
             this.Controls.Add(this.PlayerMoneyLabel);
@@ -457,5 +469,6 @@
         private System.Windows.Forms.Label PlayerMoneyLabel;
         private System.Windows.Forms.Label PlayerBetLabel;
         private System.Windows.Forms.Label PlayerWinningsLabel;
+        private System.Windows.Forms.Button button1;
     }
 }

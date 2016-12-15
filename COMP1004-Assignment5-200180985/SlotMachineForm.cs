@@ -8,15 +8,7 @@
 
 using COMP1004_Assignment5_200180985.Properties;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace COMP1004_Assignment5_200180985
@@ -142,7 +134,7 @@ namespace COMP1004_Assignment5_200180985
         private void showLossMessage()
         {
             playerMoney -= playerBet;
-            //MessageBox.Show("You Lost!", "Loss!");
+            //MessageBox.Show("You Lost!", "Loss!"); // uncomment this line for debugging
             resetFruitTally();
         }
 
@@ -168,7 +160,7 @@ namespace COMP1004_Assignment5_200180985
 
                 System.Media.SoundPlayer player = new System.Media.SoundPlayer(Resources.lockedchev);
                 
-                Application.DoEvents(); //allow windows to execute all pending tasks including your image show...
+                Application.DoEvents(); //allow windows to execute all pending tasks
                 Thread.Sleep(1250);
 
                 player.Play();
@@ -357,11 +349,11 @@ namespace COMP1004_Assignment5_200180985
                 {
                     _isSpinning = true;
                     spinResult = Reels();
-                    //fruits = spinResult[0] + " - " + spinResult[1] + " - " + spinResult[2];
-                    //MessageBox.Show(fruits);
+                    //fruits = spinResult[0] + " - " + spinResult[1] + " - " + spinResult[2]; // uncomment this line for debugging
+                    //MessageBox.Show(fruits); // uncomment this line for debugging
                     determineWinnings();
                     turn++;
-                    //showPlayerStats();
+                    //showPlayerStats(); // uncomment this line for debugging
                 }
                 else
                 {
@@ -434,6 +426,12 @@ namespace COMP1004_Assignment5_200180985
         private void Bet500PictureBox_Click(object sender, EventArgs e)
         {
             playerBet += 500;
+            UpdateLabels();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            playerBet = 0;
             UpdateLabels();
         }
     }

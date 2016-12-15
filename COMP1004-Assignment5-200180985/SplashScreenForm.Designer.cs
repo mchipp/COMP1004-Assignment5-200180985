@@ -45,7 +45,7 @@
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = global::COMP1004_Assignment5_200180985.Properties.Resources.Loadinggate_003;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(790, 262);
+            this.ClientSize = new System.Drawing.Size(600, 220);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SplashScreenForm";
