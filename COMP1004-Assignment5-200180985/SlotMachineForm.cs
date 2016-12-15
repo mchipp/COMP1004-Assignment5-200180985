@@ -49,6 +49,8 @@ namespace COMP1004_Assignment5_200180985
 
         private Random random = new Random();
 
+        private Boolean _isSpinning = false;
+
         public SlotMachineForm()
         {
             InitializeComponent();
@@ -228,6 +230,7 @@ namespace COMP1004_Assignment5_200180985
                     sevens++;
                 }
             }
+            _isSpinning = false;
             return betLine;
         }
 
@@ -325,40 +328,48 @@ namespace COMP1004_Assignment5_200180985
 
         private void SpinPictureBox_Click(object sender, EventArgs e)
         {
-            playerBet = 10; // default bet amount
+            if (_isSpinning == false)
+            {
+                //playerBet = 10; // default bet amount
 
-            if (playerMoney == 0)
-            {
-                if (MessageBox.Show("You ran out of Money! \nDo you want to play again?", "Out of Money!", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (playerMoney == 0)
                 {
-                    resetAll();
-                    showPlayerStats();
+                    if (MessageBox.Show("You ran out of Money! \nDo you want to play again?", "Out of Money!", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        resetAll();
+                        showPlayerStats();
+                    }
                 }
-            }
-            else if (playerBet > playerMoney)
-            {
-                MessageBox.Show("You don't have enough Money to place that bet.", "Insufficient Funds");
-            }
-            else if (playerBet < 0)
-            {
-                MessageBox.Show("All bets must be a positive $ amount.", "Incorrect Bet");
-            }
-            else if (playerBet <= playerMoney)
-            {
-                spinResult = Reels();
-                //fruits = spinResult[0] + " - " + spinResult[1] + " - " + spinResult[2];
-                //MessageBox.Show(fruits);
-                determineWinnings();
-                turn++;
-                //showPlayerStats();
+                else if (playerBet > playerMoney)
+                {
+                    MessageBox.Show("You don't have enough Money to place that bet.", "Insufficient Funds");
+                }
+                else if (playerBet < 0)
+                {
+                    MessageBox.Show("All bets must be a positive $ amount.", "Incorrect Bet");
+                }
+                else if (playerBet <= playerMoney)
+                {
+                    _isSpinning = true;
+                    spinResult = Reels();
+                    //fruits = spinResult[0] + " - " + spinResult[1] + " - " + spinResult[2];
+                    //MessageBox.Show(fruits);
+                    determineWinnings();
+                    turn++;
+                    //showPlayerStats();
+                }
+                else
+                {
+                    MessageBox.Show("Please enter a valid bet amount");
+                }
+
+                // now update our labels
+                UpdateLabels();
             }
             else
             {
-                MessageBox.Show("Please enter a valid bet amount");
+                MessageBox.Show("Please wait for your current spin to end");
             }
-
-            // now update our labels
-            UpdateLabels();
         }
 
         // event handler handles exiting application when power picturebox is clicked
@@ -373,9 +384,52 @@ namespace COMP1004_Assignment5_200180985
             resetAll();
         }
 
-        private void pictureBox7_Click(object sender, EventArgs e)
+        private void Bet1PictureBox_Click(object sender, EventArgs e)
         {
+            playerBet += 1;
+            UpdateLabels();
+        }
 
+        private void Bet2PictureBox_Click(object sender, EventArgs e)
+        {
+            playerBet += 2;
+            UpdateLabels();
+        }
+
+        private void Bet5PictureBox_Click(object sender, EventArgs e)
+        {
+            playerBet += 5;
+            UpdateLabels();
+        }
+
+        private void Bet10PictureBox_Click(object sender, EventArgs e)
+        {
+            playerBet += 10;
+            UpdateLabels();
+        }
+
+        private void Bet25PictureBox_Click(object sender, EventArgs e)
+        {
+            playerBet += 25;
+            UpdateLabels();
+        }
+
+        private void Bet50PictureBox_Click(object sender, EventArgs e)
+        {
+            playerBet += 50;
+            UpdateLabels();
+        }
+
+        private void Bet100PictureBox_Click(object sender, EventArgs e)
+        {
+            playerBet += 100;
+            UpdateLabels();
+        }
+
+        private void Bet500PictureBox_Click(object sender, EventArgs e)
+        {
+            playerBet += 500;
+            UpdateLabels();
         }
     }
 }

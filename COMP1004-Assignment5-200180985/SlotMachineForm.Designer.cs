@@ -38,34 +38,37 @@
             this.BetLabel = new System.Windows.Forms.Label();
             this.JackpotLabel = new System.Windows.Forms.Label();
             this.WinningsLabel = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.Bet1PictureBox = new System.Windows.Forms.PictureBox();
+            this.Bet2PictureBox = new System.Windows.Forms.PictureBox();
+            this.Bet5PictureBox = new System.Windows.Forms.PictureBox();
+            this.Bet10PictureBox = new System.Windows.Forms.PictureBox();
+            this.Bet25PictureBox = new System.Windows.Forms.PictureBox();
+            this.Bet50PictureBox = new System.Windows.Forms.PictureBox();
+            this.Bet100PictureBox = new System.Windows.Forms.PictureBox();
             this.ReelFourPictureBox = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.Bet500PictureBox = new System.Windows.Forms.PictureBox();
             this.ReelFivePictureBox = new System.Windows.Forms.PictureBox();
             this.ReelSixPictureBox = new System.Windows.Forms.PictureBox();
             this.ReelSevenPictureBox = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.PlayerMoneyLabel = new System.Windows.Forms.Label();
+            this.PlayerBetLabel = new System.Windows.Forms.Label();
+            this.PlayerWinningsLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.SpinPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ReelOnePictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ReelTwoPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ReelThreePictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExitPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ResetPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Bet1PictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Bet2PictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Bet5PictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Bet10PictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Bet25PictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Bet50PictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Bet100PictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ReelFourPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Bet500PictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ReelFivePictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ReelSixPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ReelSevenPictureBox)).BeginInit();
@@ -144,10 +147,11 @@
             this.MoneyLabel.BackColor = System.Drawing.Color.Transparent;
             this.MoneyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MoneyLabel.ForeColor = System.Drawing.Color.Gold;
-            this.MoneyLabel.Location = new System.Drawing.Point(77, 379);
+            this.MoneyLabel.Location = new System.Drawing.Point(30, 315);
             this.MoneyLabel.Name = "MoneyLabel";
-            this.MoneyLabel.Size = new System.Drawing.Size(0, 16);
+            this.MoneyLabel.Size = new System.Drawing.Size(49, 16);
             this.MoneyLabel.TabIndex = 12;
+            this.MoneyLabel.Text = "money";
             // 
             // BetLabel
             // 
@@ -155,10 +159,11 @@
             this.BetLabel.BackColor = System.Drawing.Color.Transparent;
             this.BetLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BetLabel.ForeColor = System.Drawing.Color.Gold;
-            this.BetLabel.Location = new System.Drawing.Point(201, 388);
+            this.BetLabel.Location = new System.Drawing.Point(30, 348);
             this.BetLabel.Name = "BetLabel";
-            this.BetLabel.Size = new System.Drawing.Size(0, 16);
+            this.BetLabel.Size = new System.Drawing.Size(27, 16);
             this.BetLabel.TabIndex = 13;
+            this.BetLabel.Text = "bet";
             // 
             // JackpotLabel
             // 
@@ -177,81 +182,88 @@
             this.WinningsLabel.BackColor = System.Drawing.Color.Transparent;
             this.WinningsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.WinningsLabel.ForeColor = System.Drawing.Color.Gold;
-            this.WinningsLabel.Location = new System.Drawing.Point(289, 388);
+            this.WinningsLabel.Location = new System.Drawing.Point(31, 378);
             this.WinningsLabel.Name = "WinningsLabel";
-            this.WinningsLabel.Size = new System.Drawing.Size(0, 16);
+            this.WinningsLabel.Size = new System.Drawing.Size(59, 16);
             this.WinningsLabel.TabIndex = 15;
+            this.WinningsLabel.Text = "winnings";
             // 
-            // pictureBox1
+            // Bet1PictureBox
             // 
-            this.pictureBox1.BackgroundImage = global::COMP1004_Assignment5_200180985.Properties.Resources.bet1;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(106, 400);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox1.TabIndex = 16;
-            this.pictureBox1.TabStop = false;
+            this.Bet1PictureBox.BackgroundImage = global::COMP1004_Assignment5_200180985.Properties.Resources.bet1;
+            this.Bet1PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Bet1PictureBox.Location = new System.Drawing.Point(106, 400);
+            this.Bet1PictureBox.Name = "Bet1PictureBox";
+            this.Bet1PictureBox.Size = new System.Drawing.Size(32, 32);
+            this.Bet1PictureBox.TabIndex = 16;
+            this.Bet1PictureBox.TabStop = false;
+            this.Bet1PictureBox.Click += new System.EventHandler(this.Bet1PictureBox_Click);
             // 
-            // pictureBox2
+            // Bet2PictureBox
             // 
-            this.pictureBox2.BackgroundImage = global::COMP1004_Assignment5_200180985.Properties.Resources.bet2;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(144, 400);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox2.TabIndex = 17;
-            this.pictureBox2.TabStop = false;
+            this.Bet2PictureBox.BackgroundImage = global::COMP1004_Assignment5_200180985.Properties.Resources.bet2;
+            this.Bet2PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Bet2PictureBox.Location = new System.Drawing.Point(144, 400);
+            this.Bet2PictureBox.Name = "Bet2PictureBox";
+            this.Bet2PictureBox.Size = new System.Drawing.Size(32, 32);
+            this.Bet2PictureBox.TabIndex = 17;
+            this.Bet2PictureBox.TabStop = false;
+            this.Bet2PictureBox.Click += new System.EventHandler(this.Bet2PictureBox_Click);
             // 
-            // pictureBox3
+            // Bet5PictureBox
             // 
-            this.pictureBox3.BackgroundImage = global::COMP1004_Assignment5_200180985.Properties.Resources.bet5;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(182, 400);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox3.TabIndex = 18;
-            this.pictureBox3.TabStop = false;
+            this.Bet5PictureBox.BackgroundImage = global::COMP1004_Assignment5_200180985.Properties.Resources.bet5;
+            this.Bet5PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Bet5PictureBox.Location = new System.Drawing.Point(182, 400);
+            this.Bet5PictureBox.Name = "Bet5PictureBox";
+            this.Bet5PictureBox.Size = new System.Drawing.Size(32, 32);
+            this.Bet5PictureBox.TabIndex = 18;
+            this.Bet5PictureBox.TabStop = false;
+            this.Bet5PictureBox.Click += new System.EventHandler(this.Bet5PictureBox_Click);
             // 
-            // pictureBox4
+            // Bet10PictureBox
             // 
-            this.pictureBox4.BackgroundImage = global::COMP1004_Assignment5_200180985.Properties.Resources.bet10;
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Location = new System.Drawing.Point(220, 400);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox4.TabIndex = 19;
-            this.pictureBox4.TabStop = false;
+            this.Bet10PictureBox.BackgroundImage = global::COMP1004_Assignment5_200180985.Properties.Resources.bet10;
+            this.Bet10PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Bet10PictureBox.Location = new System.Drawing.Point(220, 400);
+            this.Bet10PictureBox.Name = "Bet10PictureBox";
+            this.Bet10PictureBox.Size = new System.Drawing.Size(32, 32);
+            this.Bet10PictureBox.TabIndex = 19;
+            this.Bet10PictureBox.TabStop = false;
+            this.Bet10PictureBox.Click += new System.EventHandler(this.Bet10PictureBox_Click);
             // 
-            // pictureBox5
+            // Bet25PictureBox
             // 
-            this.pictureBox5.BackgroundImage = global::COMP1004_Assignment5_200180985.Properties.Resources.bet25;
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox5.Location = new System.Drawing.Point(258, 400);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox5.TabIndex = 20;
-            this.pictureBox5.TabStop = false;
+            this.Bet25PictureBox.BackgroundImage = global::COMP1004_Assignment5_200180985.Properties.Resources.bet25;
+            this.Bet25PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Bet25PictureBox.Location = new System.Drawing.Point(258, 400);
+            this.Bet25PictureBox.Name = "Bet25PictureBox";
+            this.Bet25PictureBox.Size = new System.Drawing.Size(32, 32);
+            this.Bet25PictureBox.TabIndex = 20;
+            this.Bet25PictureBox.TabStop = false;
+            this.Bet25PictureBox.Click += new System.EventHandler(this.Bet25PictureBox_Click);
             // 
-            // pictureBox6
+            // Bet50PictureBox
             // 
-            this.pictureBox6.BackgroundImage = global::COMP1004_Assignment5_200180985.Properties.Resources.bet50;
-            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox6.Location = new System.Drawing.Point(296, 400);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox6.TabIndex = 21;
-            this.pictureBox6.TabStop = false;
+            this.Bet50PictureBox.BackgroundImage = global::COMP1004_Assignment5_200180985.Properties.Resources.bet50;
+            this.Bet50PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Bet50PictureBox.Location = new System.Drawing.Point(296, 400);
+            this.Bet50PictureBox.Name = "Bet50PictureBox";
+            this.Bet50PictureBox.Size = new System.Drawing.Size(32, 32);
+            this.Bet50PictureBox.TabIndex = 21;
+            this.Bet50PictureBox.TabStop = false;
+            this.Bet50PictureBox.Click += new System.EventHandler(this.Bet50PictureBox_Click);
             // 
-            // pictureBox7
+            // Bet100PictureBox
             // 
-            this.pictureBox7.BackgroundImage = global::COMP1004_Assignment5_200180985.Properties.Resources.bet100;
-            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox7.Location = new System.Drawing.Point(334, 400);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox7.TabIndex = 22;
-            this.pictureBox7.TabStop = false;
-            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
+            this.Bet100PictureBox.BackgroundImage = global::COMP1004_Assignment5_200180985.Properties.Resources.bet100;
+            this.Bet100PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Bet100PictureBox.Location = new System.Drawing.Point(334, 400);
+            this.Bet100PictureBox.Name = "Bet100PictureBox";
+            this.Bet100PictureBox.Size = new System.Drawing.Size(32, 32);
+            this.Bet100PictureBox.TabIndex = 22;
+            this.Bet100PictureBox.TabStop = false;
+            this.Bet100PictureBox.Click += new System.EventHandler(this.Bet100PictureBox_Click);
             // 
             // ReelFourPictureBox
             // 
@@ -264,15 +276,16 @@
             this.ReelFourPictureBox.TabIndex = 23;
             this.ReelFourPictureBox.TabStop = false;
             // 
-            // pictureBox8
+            // Bet500PictureBox
             // 
-            this.pictureBox8.BackgroundImage = global::COMP1004_Assignment5_200180985.Properties.Resources.bet500;
-            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox8.Location = new System.Drawing.Point(372, 400);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox8.TabIndex = 24;
-            this.pictureBox8.TabStop = false;
+            this.Bet500PictureBox.BackgroundImage = global::COMP1004_Assignment5_200180985.Properties.Resources.bet500;
+            this.Bet500PictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Bet500PictureBox.Location = new System.Drawing.Point(372, 400);
+            this.Bet500PictureBox.Name = "Bet500PictureBox";
+            this.Bet500PictureBox.Size = new System.Drawing.Size(32, 32);
+            this.Bet500PictureBox.TabIndex = 24;
+            this.Bet500PictureBox.TabStop = false;
+            this.Bet500PictureBox.Click += new System.EventHandler(this.Bet500PictureBox_Click);
             // 
             // ReelFivePictureBox
             // 
@@ -319,6 +332,42 @@
             this.label1.TabIndex = 28;
             this.label1.Text = "Jackpot";
             // 
+            // PlayerMoneyLabel
+            // 
+            this.PlayerMoneyLabel.AutoSize = true;
+            this.PlayerMoneyLabel.BackColor = System.Drawing.Color.Transparent;
+            this.PlayerMoneyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PlayerMoneyLabel.ForeColor = System.Drawing.Color.Gold;
+            this.PlayerMoneyLabel.Location = new System.Drawing.Point(30, 301);
+            this.PlayerMoneyLabel.Name = "PlayerMoneyLabel";
+            this.PlayerMoneyLabel.Size = new System.Drawing.Size(44, 15);
+            this.PlayerMoneyLabel.TabIndex = 29;
+            this.PlayerMoneyLabel.Text = "Money";
+            // 
+            // PlayerBetLabel
+            // 
+            this.PlayerBetLabel.AutoSize = true;
+            this.PlayerBetLabel.BackColor = System.Drawing.Color.Transparent;
+            this.PlayerBetLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PlayerBetLabel.ForeColor = System.Drawing.Color.Gold;
+            this.PlayerBetLabel.Location = new System.Drawing.Point(30, 333);
+            this.PlayerBetLabel.Name = "PlayerBetLabel";
+            this.PlayerBetLabel.Size = new System.Drawing.Size(25, 15);
+            this.PlayerBetLabel.TabIndex = 30;
+            this.PlayerBetLabel.Text = "Bet";
+            // 
+            // PlayerWinningsLabel
+            // 
+            this.PlayerWinningsLabel.AutoSize = true;
+            this.PlayerWinningsLabel.BackColor = System.Drawing.Color.Transparent;
+            this.PlayerWinningsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PlayerWinningsLabel.ForeColor = System.Drawing.Color.Gold;
+            this.PlayerWinningsLabel.Location = new System.Drawing.Point(30, 365);
+            this.PlayerWinningsLabel.Name = "PlayerWinningsLabel";
+            this.PlayerWinningsLabel.Size = new System.Drawing.Size(58, 15);
+            this.PlayerWinningsLabel.TabIndex = 31;
+            this.PlayerWinningsLabel.Text = "Winnings";
+            // 
             // SlotMachineForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -326,19 +375,22 @@
             this.BackgroundImage = global::COMP1004_Assignment5_200180985.Properties.Resources.idle_console;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(534, 495);
+            this.Controls.Add(this.PlayerWinningsLabel);
+            this.Controls.Add(this.PlayerBetLabel);
+            this.Controls.Add(this.PlayerMoneyLabel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ReelSevenPictureBox);
             this.Controls.Add(this.ReelSixPictureBox);
             this.Controls.Add(this.ReelFivePictureBox);
-            this.Controls.Add(this.pictureBox8);
+            this.Controls.Add(this.Bet500PictureBox);
             this.Controls.Add(this.ReelFourPictureBox);
-            this.Controls.Add(this.pictureBox7);
-            this.Controls.Add(this.pictureBox6);
-            this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.Bet100PictureBox);
+            this.Controls.Add(this.Bet50PictureBox);
+            this.Controls.Add(this.Bet25PictureBox);
+            this.Controls.Add(this.Bet10PictureBox);
+            this.Controls.Add(this.Bet5PictureBox);
+            this.Controls.Add(this.Bet2PictureBox);
+            this.Controls.Add(this.Bet1PictureBox);
             this.Controls.Add(this.WinningsLabel);
             this.Controls.Add(this.JackpotLabel);
             this.Controls.Add(this.BetLabel);
@@ -361,15 +413,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.ReelThreePictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExitPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ResetPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Bet1PictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Bet2PictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Bet5PictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Bet10PictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Bet25PictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Bet50PictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Bet100PictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ReelFourPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Bet500PictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ReelFivePictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ReelSixPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ReelSevenPictureBox)).EndInit();
@@ -389,18 +441,21 @@
         private System.Windows.Forms.Label BetLabel;
         private System.Windows.Forms.Label JackpotLabel;
         private System.Windows.Forms.Label WinningsLabel;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox Bet1PictureBox;
+        private System.Windows.Forms.PictureBox Bet2PictureBox;
+        private System.Windows.Forms.PictureBox Bet5PictureBox;
+        private System.Windows.Forms.PictureBox Bet10PictureBox;
+        private System.Windows.Forms.PictureBox Bet25PictureBox;
+        private System.Windows.Forms.PictureBox Bet50PictureBox;
+        private System.Windows.Forms.PictureBox Bet100PictureBox;
         private System.Windows.Forms.PictureBox ReelFourPictureBox;
-        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.PictureBox Bet500PictureBox;
         private System.Windows.Forms.PictureBox ReelFivePictureBox;
         private System.Windows.Forms.PictureBox ReelSixPictureBox;
         private System.Windows.Forms.PictureBox ReelSevenPictureBox;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label PlayerMoneyLabel;
+        private System.Windows.Forms.Label PlayerBetLabel;
+        private System.Windows.Forms.Label PlayerWinningsLabel;
     }
 }
