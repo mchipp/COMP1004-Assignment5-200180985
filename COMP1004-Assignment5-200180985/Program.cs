@@ -16,7 +16,7 @@ namespace COMP1004_Assignment5_200180985
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SlotMachineForm());
+            Application.Run(new SplashScreenForm());
         }
     }
 }

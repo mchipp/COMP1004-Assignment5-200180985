@@ -211,6 +211,16 @@ namespace COMP1004_Assignment5_200180985.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Loadinggate_003 {
+            get {
+                object obj = ResourceManager.GetObject("Loadinggate_003", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
         internal static System.IO.UnmanagedMemoryStream lockedchev {
@@ -246,6 +256,24 @@ namespace COMP1004_Assignment5_200180985.Properties {
             get {
                 object obj = ResourceManager.GetObject("SGC_Logo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream sgclip_wav {
+            get {
+                return ResourceManager.GetStream("sgclip_wav", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream sgjackpot {
+            get {
+                return ResourceManager.GetStream("sgjackpot", resourceCulture);
             }
         }
         

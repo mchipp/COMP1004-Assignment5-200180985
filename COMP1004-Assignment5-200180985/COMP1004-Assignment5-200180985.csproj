@@ -59,6 +59,12 @@
     <Compile Include="SlotMachineForm.Designer.cs">
       <DependentUpon>SlotMachineForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SplashScreenForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreenForm.Designer.cs">
+      <DependentUpon>SplashScreenForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -66,6 +72,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SlotMachineForm.resx">
       <DependentUpon>SlotMachineForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreenForm.resx">
+      <DependentUpon>SplashScreenForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -118,12 +127,15 @@
     <None Include="Resources\grapes1.gif" />
     <None Include="Resources\locked.wav" />
     <None Include="Resources\lockedchev.wav" />
+    <None Include="Resources\Loadinggate_003.png" />
     <Content Include="Resources\orange.gif" />
     <Content Include="Resources\powerbutton.gif" />
     <Content Include="Resources\reset.gif" />
     <Content Include="Resources\seven.gif" />
     <None Include="Resources\sg_atlantis.jpg" />
     <None Include="Resources\SGC_Logo.png" />
+    <None Include="Resources\sgclip_wav.wav" />
+    <None Include="Resources\sgjackpot.wav" />
     <Content Include="Resources\slotmachine.gif" />
     <Content Include="Resources\spin.gif" />
     <None Include="Resources\spin_button.png" />

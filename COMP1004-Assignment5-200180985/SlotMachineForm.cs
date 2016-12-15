@@ -118,8 +118,11 @@ namespace COMP1004_Assignment5_200180985
             /* compare two random values */
             var jackPotTry = this.random.Next(51) + 1;
             var jackPotWin = this.random.Next(51) + 1;
+
             if (jackPotTry == jackPotWin)
             {
+                System.Media.SoundPlayer player = new System.Media.SoundPlayer(Resources.sgjackpot);
+                player.Play();
                 MessageBox.Show("You Won the $" + jackpot + " Jackpot!!", "Jackpot!!");
                 playerMoney += jackpot;
                 jackpot = 1000;
@@ -173,8 +176,10 @@ namespace COMP1004_Assignment5_200180985
 
                 outCome[spin] = this.random.Next(65) + 1;
 
-                if (checkRange(outCome[spin], 1, 27))
-                {  // 41.5% probability
+                Random rand = new Random();
+
+                if (rand.Next(1, 101) <= 18)
+                {  // 18%% probability
                     betLine[spin] = "blank";
                     // reel for current spin updates with appropriate image
                     reels[spin].Image = Resources.blank;
@@ -337,16 +342,16 @@ namespace COMP1004_Assignment5_200180985
                     if (MessageBox.Show("You ran out of Money! \nDo you want to play again?", "Out of Money!", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
                         resetAll();
-                        showPlayerStats();
+                        //showPlayerStats();
                     }
                 }
                 else if (playerBet > playerMoney)
                 {
                     MessageBox.Show("You don't have enough Money to place that bet.", "Insufficient Funds");
                 }
-                else if (playerBet < 0)
+                else if (playerBet <= 0)
                 {
-                    MessageBox.Show("All bets must be a positive $ amount.", "Incorrect Bet");
+                    MessageBox.Show("All bets must be a positive $ amount, and above 0.", "Incorrect Bet");
                 }
                 else if (playerBet <= playerMoney)
                 {
